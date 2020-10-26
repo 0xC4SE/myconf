@@ -6,9 +6,9 @@
          "name":"cpp",
          "type": "cppdbg",
          "request": "launch",
-         "program": "${file}/{fileBasenameNoExtension}",
+         "program": "${fileDirname}/${fileBasenameNoExtension}",
          "args":["*${ProgramArgs}"] ,
-         "cwd": "$(workspaceRoot)",
+         "cwd": "${fileDirname}",
          "environment": [],
          "externalConsole": true,
          "MIMode": "gdb",
@@ -22,7 +22,7 @@
  "configuration": {
         "name":"cpp",
         "request": "attach",
-        "program": "${file}/{fileBasenameNoExtension}",
+        "program": "${file}",
         "MIMode": "gdb"
         }
      }
